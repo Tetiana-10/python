@@ -1,0 +1,11 @@
+#Display average hwy based on the auto class 
+
+auto_classes = set(d['class'] for d in mpg)
+HwyByClass = []
+for auto_class in auto_classes:
+    hwys=[float(d['hwy']) for d in mpg if d['class']==auto_class]
+    average_hwy=sum(hwys)/len(hwys)
+    HwyByClass.append((auto_class,average_hwy))
+                       
+HwyByClass.sort(key=lambda x: x[1])
+HwyByClass
