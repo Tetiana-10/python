@@ -1,0 +1,2 @@
+Which country had the biggest difference between their summer and winter gold medal counts?
+df[(df['Gold']-df['Gold.1'])==np.max(df['Gold']-df['Gold.1'])]
